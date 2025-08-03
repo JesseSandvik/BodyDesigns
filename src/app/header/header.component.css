@@ -1,40 +1,58 @@
 :host header {
     display: grid;
-    grid-template-columns: auto 1fr auto;
-    padding: 1rem 2rem;
+    grid-template-columns: auto 1fr;
+    padding: 1rem;
     z-index: 1000;
 }
 
 :host header .header-left {
-    align-items: center;
+    align-items: flex-start;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
-:host header .header-left h1 {
-    font-size: 6rem;
+:host header .header-left a {
+    align-items: center;
+    border-left: 1px solid var(--accent-color-one);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    padding-left: 1rem;
+}
+
+:host header .header-left a p {
+    color: var(--accent-color-one);
+    font-family: var(--font-accent);
+    font-size: 3rem;
+}
+
+:host header .header-left a small {
+    border-top: 1px solid var(--accent-color-one);
+    font-size: 1rem;
+    padding: .5rem 1rem;
+    transform: translate(0, -18px);
 }
 
 :host header .header-right {
     align-items: center;
     display: flex;
-    flex-direction: column;
-    gap: .25rem;
+    justify-content: flex-start;
+    padding: 1rem;
+}
+
+:host header .header-right .header-nav ul {
+    align-items: center;
+    display: flex;
+    gap: 1rem;
     justify-content: center;
 }
 
-:host header .header-right .header-icons {
+:host header .header-right .header-nav ul li a {
     align-items: center;
     display: flex;
-}
-
-:host header .header-right .business-address {
-    border: 1px solid var(--text-color);
-    border-radius: var(--default-border-radius);
-    padding: .25rem .5rem;
-}
-
-:host header .header-right .header-icons a i {
-    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: .2rem;
+    padding: .5rem 2rem;
+    text-transform: uppercase;
 }

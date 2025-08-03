@@ -1,0 +1,19 @@
+:host {
+    display: grid;
+    height: 100%;
+}
+
+:host .home-container {
+    margin: 1rem;
+    padding: 1rem;
+}
+
+:host .home-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+:host .home-left h1 {
+    font-size: 6rem;
+}

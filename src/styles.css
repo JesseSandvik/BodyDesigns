@@ -14,7 +14,7 @@
   --background-color: #0f0f0f;
   --default-border-radius: 8px;
   --font-body: "Jost", sans-serif;
-  --font-heading: 'Birthstone', cursive;
+  --font-accent: 'Birthstone', cursive;
   --text-color: #F0F6F6;
 }
 
@@ -57,8 +57,6 @@ a:focus {
 
 /* Headings consistent margin */
 h1, h2, h3, h4, h5, h6 {
-  /* font-size: 3rem; */
-  font-family: var(--font-heading);
   font-weight: 700;
   margin: 0;
   padding: 0;
@@ -66,7 +64,8 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Paragraph spacing */
 p {
-  margin-bottom: 1em;
+  margin: 0;
+  padding: 0;
 }
 
 /* Images responsive by default */
@@ -113,4 +112,8 @@ button:hover,
   body {
     font-size: 16px;
   }
+}
+
+.separator {
+  color: var(--accent-color-one);
 }

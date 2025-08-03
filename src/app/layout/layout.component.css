@@ -5,6 +5,22 @@
 }
 
 :host main {
+    border-right: 1px solid var(--accent-color-one);
+    display: grid;
+    grid-template-columns: auto 1fr;
     margin: 1rem;
     padding: 1rem;
+}
+
+:host main .social-icons {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    grid-column: -1;
+    justify-content: space-evenly;
+}
+
+:host main .social-icons a i {
+    font-size: 3rem;
 }
