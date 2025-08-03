@@ -1,0 +1,10 @@
+:host footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+:host footer .footer-container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}

@@ -1,3 +1,40 @@
-header {
-    border: 2px solid red;
+:host header {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    padding: 1rem 2rem;
+    z-index: 1000;
+}
+
+:host header .header-left {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+:host header .header-left h1 {
+    font-size: 6rem;
+}
+
+:host header .header-right {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+    justify-content: center;
+}
+
+:host header .header-right .header-icons {
+    align-items: center;
+    display: flex;
+}
+
+:host header .header-right .business-address {
+    border: 1px solid var(--text-color);
+    border-radius: var(--default-border-radius);
+    padding: .25rem .5rem;
+}
+
+:host header .header-right .header-icons a i {
+    font-size: 2rem;
 }

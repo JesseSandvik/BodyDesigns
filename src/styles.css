@@ -1,1 +1,116 @@
-/* You can add global styles to this file, and also import other style files */
+/* Reset margin/padding for all elements */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --accent-color-one: #C4A77D;
+  --accent-color-two: #839073;
+  --accent-color-three: #998DA0;
+  --background-color: #0f0f0f;
+  --default-border-radius: 8px;
+  --font-body: "Jost", sans-serif;
+  --font-heading: 'Birthstone', cursive;
+  --text-color: #F0F6F6;
+}
+
+/* Use a comfortable line-height and readable font */
+body {
+  background:
+    linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0.1)),
+    linear-gradient(to right, rgba(0,0,0,0.8), rgba(0,0,0,0.1)),
+    url('assets/main_wallpaper.jpg');
+  background-color: var(--background-color);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: var(--text-color);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Remove list styling for ul/ol */
+ul, ol {
+  list-style: none;
+}
+
+/* Anchor default styles */
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+a:hover,
+a:focus {
+  color: var(--accent-color-one);
+  outline: none;
+}
+
+/* Headings consistent margin */
+h1, h2, h3, h4, h5, h6 {
+  /* font-size: 3rem; */
+  font-family: var(--font-heading);
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+}
+
+/* Paragraph spacing */
+p {
+  margin-bottom: 1em;
+}
+
+/* Images responsive by default */
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+/* Container helper for consistent width */
+.container {
+  max-width: 1200px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Utility: Center content */
+.text-center {
+  text-align: center;
+}
+
+/* Buttons */
+button,
+.btn {
+  background-color: #c0392b;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.25rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover,
+.btn:hover {
+  background-color: #e74c3c;
+}
+
+/* Responsive typography */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+}
