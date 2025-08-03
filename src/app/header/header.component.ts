@@ -8,4 +8,10 @@ import { RouterModule } from "@angular/router";
   styleUrls: ['./header.component.css'],
   imports: [CommonModule, RouterModule]
 })
-export class HeaderComponent {}
+export class HeaderComponent {
+  isMenuOpen: boolean = false;
+
+  toggleMenu(): void {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
+}

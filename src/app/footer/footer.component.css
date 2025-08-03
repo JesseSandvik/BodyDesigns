@@ -1,12 +1,26 @@
 :host footer {
+    border: 1px solid orange;
     display: grid;
-    grid-template-columns: 1fr auto;
-    padding: 1rem 2rem;
 }
 
-:host .footer-right {
-    align-items: flex-end;
+@media (min-width: 1024px) {
+  :host footer {
+    grid-template-columns: 1fr auto;
+    padding: 1rem 2rem;
+  }
+}
+
+:host footer .footer-right {
+    align-items: center;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@media (min-width: 1024px) {
+  :host footer .footer-right {
+    align-items: flex-end;
     gap: 1rem;
     justify-content: flex-end;
+  }
 }

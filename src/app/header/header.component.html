@@ -1,19 +1,21 @@
 <header>
-    <div ngClass="header-container header-left">
+    <div class="header-primary-container">
         <a routerLink="/">
-            <p>Body Designs</p>
+            <span>Body Designs</span>
             <small>Tattoo &amp; Body Piercing Studio</small>
         </a>
+        <div class="header-hamburger-container">
+            <button class="header-hamburger" aria-label="Toggle navigation" (click)="toggleMenu()"
+                [attr.aria-expanded]="isMenuOpen">&#9776;</button>
+        </div>
     </div>
-    <div ngClass="header-container header-right">
-        <nav ngClass="header-nav">
-            <ul>
-                <li><a routerLink="/artists">artists</a></li>
-                <span ngClass="separator">|</span>
-                <li><a routerLink="/gallery">gallery</a></li>
-                <span ngClass="separator">|</span>
-                <li><a routerLink="/contact">contact</a></li>
-            </ul>
-        </nav>
-    </div>
+    <nav class="header-nav" [class.active]="isMenuOpen">
+        <ul>
+            <li><a routerLink="/artists" (click)="isMenuOpen = false">artists</a></li>
+            <span class="separator">|</span>
+            <li><a routerLink="/gallery" (click)="isMenuOpen = false">gallery</a></li>
+            <span class="separator">|</span>
+            <li><a routerLink="/contact" (click)="isMenuOpen = false">contact</a></li>
+        </ul>
+    </nav>
 </header>
