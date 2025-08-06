@@ -82,12 +82,12 @@ button {
 }
 
 .separator {
-  visibility: hidden;
+  display: none;
 }
 
 @media (min-width: 1024px) {
     .separator {
       color: var(--accent-color-one);
-      visibility: visible;
+      display: block;
     }
 }
