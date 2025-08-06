@@ -5,11 +5,12 @@
             <small>Tattoo &amp; Body Piercing Studio</small>
         </a>
         <div class="header-hamburger-container">
-            <button class="header-hamburger" aria-label="Toggle navigation" (click)="toggleMenu()"
-                [attr.aria-expanded]="isMenuOpen">&#9776;</button>
+            <button class="hamburger" aria-label="Toggle menu" [attr.aria-expanded]="isMenuOpen" (click)="toggleMenu()">
+                <span [class.open]="isMenuOpen"></span>
+            </button>
         </div>
     </div>
-    <nav class="header-nav" [class.active]="isMenuOpen">
+    <nav class="header-nav" [class.open]="isMenuOpen">
         <ul>
             <li><a routerLink="/artists" (click)="isMenuOpen = false">artists</a></li>
             <span class="separator">|</span>
