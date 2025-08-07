@@ -1,0 +1,76 @@
+:host {
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
+:host header {
+    align-items: center;
+    display: flex;
+}
+
+:host header h1 {
+    color: var(--accent-color-one);
+    font-family: var(--font-accent);
+    font-size: 5rem;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    top: 128px;
+    left: 0;
+    text-transform: capitalize;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+}
+
+:host header i {
+    color: var(--accent-color-one);
+    font-size: 2rem;
+}
+
+:host .artists-container {
+    display: grid;
+    margin-left: 128px;
+}
+
+:host .artists-container article {
+    background: rgba(0, 0, 0, 0.66);
+    backdrop-filter: blur(10px);
+    border-radius: var(--default-border-radius);
+    display: grid;
+    padding: 1rem;
+    -webkit-backdrop-filter: blur(10px);
+}
+
+:host .artists-container article .artist-article-header {
+    align-items: center;
+    border-left: 1px solid var(--accent-color-one);
+    display: flex;
+    justify-content: flex-start;
+    padding: 1rem;
+}
+
+:host .artists-container article .artist-article-header h2 {
+    font-family: var(--font-accent);
+    font-size: 4rem;
+}
+
+:host .artists-container article .artist-article-body {
+    border-right: 1px solid var(--accent-color-one);
+    display: flex;
+    padding: 1rem;
+}
+
+:host .artists-container article .artist-article-body p {
+    display: flex;
+    letter-spacing: .05rem;
+    padding: 0 2rem;
+}
+
+:host .artists-container article img {
+    border-radius: 8px;
+    display: block;
+    filter: grayscale(50%) contrast(1.33);
+    height: 300px;
+    transform: scaleX(-1);
+    width: 300px;
+}

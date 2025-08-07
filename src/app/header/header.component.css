@@ -1,6 +1,14 @@
+:host {
+    height: 128px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
 :host header {
     display: grid;
-    z-index: 1000;
+    height: 100%;
 }
 
 :host header .header-primary-container {
@@ -15,6 +23,7 @@
     color: var(--text-color);
     display: flex;
     flex-direction: column;
+    height: 100%;
 }
 
 :host header .header-primary-container a span {
@@ -95,7 +104,6 @@
     align-items: center;
     display: flex;
     justify-content: center;
-    padding: 1rem;
 }
 
 :host header .header-nav ul {
@@ -119,7 +127,6 @@
 
     :host header {
         grid-template-columns: auto 1fr;
-        padding: 1rem;
     }
 
     :host header .header-primary-container {

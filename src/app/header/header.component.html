@@ -1,6 +1,6 @@
 <header>
     <div class="header-primary-container">
-        <a routerLink="/">
+        <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
             <span>Body Designs</span>
             <small>Tattoo &amp; Body Piercing Studio</small>
         </a>
@@ -12,11 +12,11 @@
     </div>
     <nav class="header-nav" [class.open]="isMenuOpen">
         <ul>
-            <li><a routerLink="/artists" (click)="isMenuOpen = false">artists</a></li>
+            <li><a routerLink="/artists" routerLinkActive="active" (click)="isMenuOpen = false">artists</a></li>
             <span class="separator">|</span>
-            <li><a routerLink="/gallery" (click)="isMenuOpen = false">gallery</a></li>
+            <li><a routerLink="/gallery" routerLinkActive="active" (click)="isMenuOpen = false">gallery</a></li>
             <span class="separator">|</span>
-            <li><a routerLink="/contact" (click)="isMenuOpen = false">contact</a></li>
+            <li><a routerLink="/contact" routerLinkActive="active" (click)="isMenuOpen = false">contact</a></li>
         </ul>
     </nav>
 </header>

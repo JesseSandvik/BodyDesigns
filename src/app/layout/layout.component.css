@@ -1,7 +1,8 @@
 :host {
     display: grid;
-    grid-template-rows: auto 1fr auto;
+    grid-template-rows: 1fr auto;
     min-height: 100vh;
+    padding-top: 100px;
 }
 
 :host main {
@@ -9,9 +10,15 @@
     display: grid;
 }
 
+:host main .app-page {
+    max-height: 75vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
 @media (min-width: 1024px) {
     :host main {
-        grid-template-columns: auto 1fr;
+        grid-template-columns: 1fr auto;
         margin: 1rem;
         padding: 1rem;
     }
@@ -30,6 +37,7 @@
         grid-column: -1;
         justify-content: space-evenly;
         visibility: visible;
+        width: 128px;
     }
 
     :host main .social-icons a i {

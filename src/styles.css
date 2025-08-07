@@ -46,7 +46,8 @@ a {
 }
 
 a:hover,
-a:focus {
+a:focus,
+a.active {
   color: var(--accent-color-one);
   outline: none;
 }
