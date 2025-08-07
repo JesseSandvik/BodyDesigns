@@ -8,28 +8,41 @@
     display: flex;
 }
 
-:host header h1 {
-    color: var(--accent-color-one);
-    font-family: var(--font-accent);
-    font-size: 5rem;
-    padding: 1rem;
-    position: fixed;
+:host .page-header {
+    align-items: center;
     bottom: 0;
-    top: 128px;
     left: 0;
+    top: 128px;
+    justify-content: center;
+    position: fixed;
     text-transform: capitalize;
     writing-mode: vertical-rl;
     text-orientation: upright;
 }
 
-:host header i {
+:host .page-header h1 {
+    color: var(--accent-color-one);
+    font-family: var(--font-accent);
+    font-size: 5rem;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    top: 128px;
+    text-transform: capitalize;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+}
+
+:host .page-header i {
     color: var(--accent-color-one);
     font-size: 2rem;
 }
 
 :host .artists-container {
     display: grid;
+    gap: 2rem;
     margin-left: 128px;
+    padding: 1rem;
 }
 
 :host .artists-container article {
@@ -37,27 +50,43 @@
     backdrop-filter: blur(10px);
     border-radius: var(--default-border-radius);
     display: grid;
-    padding: 1rem;
     -webkit-backdrop-filter: blur(10px);
 }
 
 :host .artists-container article .artist-article-header {
-    align-items: center;
+    align-items: flex-start;
+    border-radius: var(--default-border-radius);
     border-left: 1px solid var(--accent-color-one);
     display: flex;
-    justify-content: flex-start;
-    padding: 1rem;
+    flex-direction: column;
+    padding: 2rem;
 }
 
 :host .artists-container article .artist-article-header h2 {
     font-family: var(--font-accent);
     font-size: 4rem;
+    line-height: 3rem;
+}
+
+:host .artists-container article .artist-article-header small {
+    text-transform: capitalize;
+}
+
+:host .artists-container article .artist-article-header a {
+    align-items: center;
+    display: flex;
+}
+
+:host .artists-container article .artist-article-header a i {
+    color: var(--accent-color-one);
+    font-size: 1rem;
 }
 
 :host .artists-container article .artist-article-body {
     border-right: 1px solid var(--accent-color-one);
+    border-radius: var(--default-border-radius);
     display: flex;
-    padding: 1rem;
+    padding: 2rem;
 }
 
 :host .artists-container article .artist-article-body p {

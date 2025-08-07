@@ -2,26 +2,20 @@
     display: grid;
     grid-template-rows: 1fr auto;
     min-height: 100vh;
-    padding-top: 100px;
+    padding-top: 128px;
 }
 
 :host main {
     border-right: 1px solid var(--accent-color-one);
+    border-radius: var(--default-border-radius);
     display: grid;
 }
 
 :host main .app-page {
     max-height: 75vh;
+    padding-top: 1rem;
     overflow-x: hidden;
     overflow-y: auto;
-}
-
-@media (min-width: 1024px) {
-    :host main {
-        grid-template-columns: 1fr auto;
-        margin: 1rem;
-        padding: 1rem;
-    }
 }
 
 :host main .social-icons {
@@ -29,6 +23,11 @@
 }
 
 @media (min-width: 1024px) {
+
+    :host main {
+        grid-template-columns: 1fr auto;
+    }
+
     :host main .social-icons {
         align-items: center;
         display: flex;
@@ -43,4 +42,5 @@
     :host main .social-icons a i {
         font-size: 3rem;
     }
+
 }
