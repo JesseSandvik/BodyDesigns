@@ -1,5 +1,5 @@
 :host {
-    height: 128px;
+    height: var(--header-height);
     position: fixed;
     top: 0;
     width: 100%;
@@ -23,7 +23,7 @@
     color: var(--text-color);
     display: flex;
     flex-direction: column;
-    height: 128px;
+    height: var(--header-height);
     justify-content: center;
     padding: 1rem;
 }

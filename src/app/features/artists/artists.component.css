@@ -8,41 +8,17 @@
     display: flex;
 }
 
-:host .page-header {
-    align-items: center;
-    bottom: 0;
-    left: 0;
-    top: 128px;
-    justify-content: center;
-    position: fixed;
-    text-transform: capitalize;
-    writing-mode: vertical-rl;
-    text-orientation: upright;
-}
-
 :host .page-header h1 {
     color: var(--accent-color-one);
     font-family: var(--font-accent);
-    font-size: 5rem;
-    bottom: 0;
-    left: 0;
-    position: fixed;
-    top: 128px;
+    font-size: 4rem;
+    padding: 0 1rem;
     text-transform: capitalize;
-    writing-mode: vertical-rl;
-    text-orientation: upright;
-}
-
-:host .page-header i {
-    color: var(--accent-color-one);
-    font-size: 2rem;
 }
 
 :host .artists-container {
     display: grid;
     gap: 2rem;
-    margin-left: 128px;
-    padding: 1rem;
 }
 
 :host .artists-container article {
@@ -92,7 +68,6 @@
 :host .artists-container article .artist-article-body p {
     display: flex;
     letter-spacing: .05rem;
-    padding: 0 2rem;
 }
 
 :host .artists-container article img {
@@ -102,4 +77,56 @@
     height: 300px;
     transform: scaleX(-1);
     width: 300px;
+}
+
+@media (min-width: 1024px) {
+
+    :host .page-header {
+        align-items: center;
+        bottom: 0;
+        left: 0;
+        top: var(--header-height);
+        justify-content: center;
+        position: fixed;
+        text-transform: capitalize;
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+    }
+
+    :host .page-header h1 {
+        bottom: 0;
+        left: 0;
+        padding-top: 2rem;
+        position: fixed;
+        top: var(--header-height);
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+    }
+
+    :host .artists-container {
+        margin-left: 128px;
+        padding: 1rem;
+    }
+
+    :host .artists-container article .artist-article-body p {
+        padding: 0 2rem;
+    }
+
+}
+
+@media (max-width: 1024px) {
+
+    :host .page-header {
+        justify-content: center;
+    }
+
+    :host .page-header h1 {
+        font-size: 5rem;
+    }
+
+    :host .artists-container article .artist-article-body {
+        flex-direction: column-reverse;
+        gap: 1rem;
+    }
+
 }

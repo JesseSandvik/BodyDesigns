@@ -2,7 +2,7 @@
     display: grid;
     grid-template-rows: 1fr auto;
     min-height: 100vh;
-    padding-top: 128px;
+    padding-top: var(--header-height);
 }
 
 :host main {
@@ -12,8 +12,8 @@
 }
 
 :host main .app-page {
-    max-height: 75vh;
-    padding-top: 1rem;
+    max-height: var(--page-body-height);
+    padding-bottom: var(--footer-height);
     overflow-x: hidden;
     overflow-y: auto;
 }
@@ -26,6 +26,10 @@
 
     :host main {
         grid-template-columns: 1fr auto;
+    }
+
+    :host main .app-page {
+        padding-top: 1rem;
     }
 
     :host main .social-icons {
