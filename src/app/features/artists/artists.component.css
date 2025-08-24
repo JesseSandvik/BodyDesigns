@@ -59,6 +59,7 @@
 }
 
 :host .artists-container article .artist-article-body {
+    align-items: center;
     border-right: 1px solid var(--accent-color-one);
     border-radius: var(--default-border-radius);
     display: flex;
@@ -66,7 +67,7 @@
 }
 
 :host .artists-container article .artist-article-body p {
-    display: flex;
+    font-size: 1.5rem;
     letter-spacing: .05rem;
 }
 
