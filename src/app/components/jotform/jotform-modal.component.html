@@ -1,0 +1,14 @@
+<!-- Trigger button -->
+<button class="jf-open-btn" (click)="openModal()">{{ buttonLabel }}</button>
+
+<!-- Modal -->
+<div class="jf-modal" [class.jf-show]="showModal">
+    <div class="jf-overlay" (click)="closeModal()"></div>
+
+    <div class="jf-content" [class.jf-show-content]="showContent">
+        <span class="jf-close" (click)="closeModal()">&times;</span>
+        @if (safeUrl) {
+            <iframe [src]="safeUrl" frameborder="0" width="100%" height="600"></iframe>
+        }
+    </div>
+</div>
