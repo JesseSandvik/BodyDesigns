@@ -14,6 +14,13 @@
     justify-content: center;
 }
 
+:host .requests-container {
+    align-items: center;
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+}
+
 @media (min-width: 1024px) {
 
     :host .home-left h1 {
@@ -26,6 +33,10 @@
 
     :host .home-left h1 {
         font-size: 3rem;
+    }
+
+    :host .requests-container {
+        flex-direction: column;
     }
 
 }
