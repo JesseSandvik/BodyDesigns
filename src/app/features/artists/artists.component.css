@@ -28,6 +28,12 @@
     font-size: 4rem;
 }
 
+:host .artist-container .artist-container-header .artist-header-synopsis {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+}
+
 :host .artist-container .artist-container-header small {
     font-size: 1rem;
     text-transform: capitalize;
@@ -40,7 +46,6 @@
 }
 
 :host .artist-container .artist-container-body {
-    align-items: flex-start;
     display: flex;
     gap: 1rem;
     justify-content: space-between;
@@ -49,12 +54,10 @@
 :host .artist-container .artist-container-body p {
     display: block;
     font-size: 1.2rem;
-    margin-left: 1rem;
     padding: 2rem;
 }
 
 :host .artist-container .artist-container-body .artist-image-container {
-    border-right: 1px solid var(--accent-color-one);
     padding: 1rem;
 }
 
@@ -62,11 +65,62 @@
     border-radius: var(--default-border-radius);
     display: block;
     filter: grayscale(50%) contrast(1.33);
-    height: 300px;
     transform: scaleX(-1);
-    width: 300px;
 }
 
-@media (min-width: 1024px) {}
+@media (min-width: 1024px) {
+    :host .artist-container .artist-container-header {
+        border-top: 1px solid var(--accent-color-one);
+        border-right: 1px solid var(--accent-color-one);
+    }
 
-@media (max-width: 1024px) {}
+    :host .artist-container .artist-container-header .artist-header-synopsis {
+        align-items: flex-start;
+    }
+
+    :host .artist-container .artist-container-body {
+        align-items: flex-start;
+    }
+
+    :host .artist-container .artist-container-body p {
+        margin-left: 1rem;
+    }
+
+    :host .artist-container .artist-container-body .artist-image-container {
+        border-right: 1px solid var(--accent-color-one);
+    }
+
+    :host .artist-container .artist-container-body img {
+        height: 300px;
+        width: 300px;
+    }
+}
+
+@media (max-width: 1024px) {
+    :host .artist-container .artist-container-header {
+        align-items: center;
+        border: 1px solid var(--accent-color-one);       
+    }
+
+    :host .artist-container .artist-container-header .artist-header-synopsis {
+        align-items: center;
+    }
+
+    :host .artist-container .artist-container-body {
+        align-items: center;
+        flex-direction: column-reverse;
+    }
+
+    :host .artist-container .artist-container-body p {
+        border: 1px solid var(--accent-color-one);
+        text-align: center;
+    }
+
+    :host .artist-container .artist-container-body .artist-image-container {
+        border: 1px solid var(--accent-color-one);
+    }
+
+    :host .artist-container .artist-container-body img {
+        width: 90vw;
+    }
+}

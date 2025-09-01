@@ -1,42 +1,52 @@
 :host {
+    align-items: center;
     display: grid;
     height: 100%;
 }
 
-:host .home-container {
-    margin: 1rem;
-    padding: 1rem;
+:host .page-body {
+    grid-template-rows: auto 1fr 1fr;
 }
 
-:host .home-left {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+:host .page-body .home-body p {
+    font-size: 1.2rem;
 }
 
 :host .requests-container {
     align-items: center;
     display: flex;
-    gap: 2rem;
-    padding: 2rem;
+    gap: 1rem;
+    padding: 1rem;
 }
 
 @media (min-width: 1024px) {
 
-    :host .home-left h1 {
-        font-size: 6rem;
+    :host .page-body {
+        padding: 2rem;
+    }
+
+    :host .page-body h1 {
+        font-size: 5rem;
     }
 
 }
 
 @media (max-width: 1024px) {
 
-    :host .home-left h1 {
+    :host .page-body {
+        align-items: center;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    :host .page-body h1 {
         font-size: 3rem;
     }
 
     :host .requests-container {
         flex-direction: column;
+        gap: 2rem;
+        padding-bottom: var(--footer-height);
     }
 
 }

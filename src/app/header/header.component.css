@@ -19,7 +19,6 @@
 }
 
 :host header .header-primary-container a {
-    align-items: center;
     color: var(--text-color);
     display: flex;
     flex-direction: column;
@@ -161,6 +160,19 @@
 }
 
 @media (max-width: 1024px) {
+
+    :host header {
+        background: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+    }
+
+    :host header .header-primary-container a span { 
+        color: var(--accent-color-one);
+        font-family: var(--font-accent);
+        line-height: 2rem;
+        font-size: 2rem;
+    }
 
     :host header .header-nav {
         background: rgba(0, 0, 0, 0.8);
