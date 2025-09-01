@@ -2,7 +2,6 @@
     display: grid;
     grid-template-rows: 1fr auto;
     min-height: 100vh;
-    padding-top: var(--header-height);
 }
 
 :host main {
@@ -13,13 +12,13 @@
 
 :host main .app-page {
     max-height: var(--page-body-height);
-    padding-bottom: var(--footer-height);
+    margin-top: var(--header-height);
     overflow-x: hidden;
     overflow-y: auto;
 }
 
 :host main .social-icons {
-    visibility: hidden;
+    display: none;
 }
 
 @media (min-width: 1024px) {
@@ -28,22 +27,16 @@
         grid-template-columns: 1fr auto;
     }
 
-    :host main .app-page {
-        padding-top: 1rem;
-    }
-
     :host main .social-icons {
         align-items: center;
         display: flex;
         flex-direction: column;
-        gap: 1rem;
         grid-column: -1;
         justify-content: space-evenly;
-        visibility: visible;
-        width: 128px;
+        width: var(--sidebar-width);
     }
 
-    :host main .social-icons a i {
+    :host main .social-icons a {
         font-size: 3rem;
     }
 

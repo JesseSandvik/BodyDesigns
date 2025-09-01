@@ -12,6 +12,8 @@
     </div>
     <nav class="header-nav" [class.open]="isMenuOpen">
         <ul>
+            <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+true}" (click)="isMenuOpen = false">home</a></li>
             <li><a routerLink="/artists" routerLinkActive="active" (click)="isMenuOpen = false">artists</a></li>
             <span class="separator">|</span>
             <li><a routerLink="/gallery" routerLinkActive="active" (click)="isMenuOpen = false">gallery</a></li>

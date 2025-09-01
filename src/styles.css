@@ -12,9 +12,10 @@
   --accent-color-three: #998DA0;
   --background-color: #0f0f0f;
   --default-border-radius: 8px;
-  --header-height: 15vh;
-  --page-body-height: 75vh;
+  --header-height: 10vh;
+  --page-body-height: 80vh;
   --footer-height: 10vh;
+  --sidebar-width: 10vw;
   --font-body: "Jost", sans-serif;
   --font-accent: 'Birthstone', cursive;
   --text-color: #F0F6F6;
@@ -61,6 +62,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   margin: 0;
   padding: 0;
+  text-transform: capitalize;
 }
 
 p {
@@ -87,6 +89,43 @@ button {
 
 .header-separator {
   color: var(--accent-color-one);
+}
+
+.page-header {
+  align-items: flex-start;
+  bottom: var(--footer-height);
+  display: flex;
+  height: var(--header-height);
+  justify-content: flex-end;
+  padding: 1rem;
+  position: absolute;
+  left: 0;
+  right: var(--sidebar-width);
+  top: var(--header-height);
+}
+
+.page-header h1 {
+  border-left: 1px solid var(--accent-color-one);
+  border-right: 1px solid var(--accent-color-one);
+  border-radius: var(--default-border-radius);
+  color: var(--accent-color-one);
+  font-size: 3.93rem;
+  letter-spacing: 3.93rem;
+  padding-left: 3.39rem;
+  text-transform: uppercase;
+}
+
+.page-body {
+  display: grid;
+  margin-top: var(--header-height);
+  padding: 1rem;
+}
+
+.glass-background {
+  background: rgba(0, 0, 0, 0.66);
+  backdrop-filter: blur(10px);
+  border-radius: var(--default-border-radius);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 @media (min-width: 1024px) {

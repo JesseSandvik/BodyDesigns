@@ -56,7 +56,7 @@
   }
 
   :host footer .footer-right {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 
   :host footer .footer-right small {
