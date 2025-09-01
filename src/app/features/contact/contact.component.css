@@ -3,19 +3,6 @@
     grid-template-rows: auto 1fr;
 }
 
-:host header {
-    align-items: center;
-    display: flex;
-}
-
-:host .page-header h1 {
-    color: var(--accent-color-one);
-    font-family: var(--font-accent);
-    font-size: 4rem;
-    padding: 0 1rem;
-    text-transform: capitalize;
-}
-
 :host .contact-container {
     display: grid;
     gap: 2rem;
@@ -94,6 +81,7 @@
     display: flex;
     gap: 1rem;
     justify-content: center;
+    padding: 1rem;
 }
 
 :host .contact-container article .contact-article-body .contact-article-body-container .social-icons i {
@@ -101,28 +89,6 @@
 }
 
 @media (min-width: 1024px) {
-
-    :host .page-header {
-        align-items: center;
-        bottom: 0;
-        left: 0;
-        top: var(--header-height);
-        justify-content: center;
-        position: fixed;
-        text-transform: capitalize;
-        writing-mode: vertical-rl;
-        text-orientation: upright;
-    }
-
-    :host .page-header h1 {
-        bottom: 0;
-        left: 0;
-        padding-top: 2rem;
-        position: fixed;
-        top: var(--header-height);
-        writing-mode: vertical-rl;
-        text-orientation: upright;
-    }
 
     :host .contact-container {
         margin-left: 128px;
@@ -139,17 +105,13 @@
 
 @media (max-width: 1024px) {
 
-    :host .page-header {
-        justify-content: center;
-    }
-
-    :host .page-header h1 {
-        font-size: 5rem;
-    }
-
     :host .contact-container .contact-article-body {
         gap: 5rem;
         grid-template-rows: repeat(2, 1fr);
+    }
+
+    :host .contact-container article .contact-article-header h2 {
+        text-align: center;
     }
 
 }
