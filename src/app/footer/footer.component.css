@@ -10,6 +10,12 @@
     justify-content: center;
 }
 
+:host footer .footer-right .contact-info {
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+}
+
 :host footer .footer-right .social-icons {
   align-items: center;
   display: flex;
@@ -42,7 +48,7 @@
   :host {
     bottom: 0;
     left: 0;
-    height: 128px;
+    height: var(--footer-height);
     right: 0;
     position: fixed;
     z-index: 1000;
@@ -57,6 +63,11 @@
 
   :host footer .footer-right {
     flex-direction: column-reverse;
+  }
+
+  :host footer .footer-right .contact-info {
+    justify-content: space-evenly;
+    width: 100%;
   }
 
   :host footer .footer-right small {
