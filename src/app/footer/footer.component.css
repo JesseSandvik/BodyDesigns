@@ -19,7 +19,7 @@
 :host footer .footer-right .social-icons {
   align-items: center;
   display: flex;
-  font-size: 2rem;
+  font-size: 1.5rem;
   justify-content: space-evenly;
   width: 100%;
 }
@@ -45,20 +45,16 @@
 
 @media (max-width: 1024px) {
 
-  :host {
-    bottom: 0;
-    left: 0;
-    height: var(--footer-height);
-    right: 0;
-    position: fixed;
-    z-index: 1000;
-  }
-
   :host footer {
     background: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(10px);
-    height: 100%;
     -webkit-backdrop-filter: blur(10px);
+    bottom: 0;
+    height: var(--footer-height);
+    left: 0;
+    right: 0;
+    position: fixed;
+    z-index: 1000;
   }
 
   :host footer .footer-right {
